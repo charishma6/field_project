@@ -1,0 +1,40 @@
+/* login.css */
+
+body {
+    background-color: #90b5da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login-container {
+    background: #fdfdfd;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .login-header {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .login-form {
+    width: 100%;
+  }
+  
+  .login-button {
+    width: 100%;
+    background: #007bff;
+    border: none;
+    margin-top: 1rem;
+  }
+  
+  .signup-link {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  

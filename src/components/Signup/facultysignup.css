@@ -1,0 +1,36 @@
+/* facultysignup.css */
+
+
+.signup-container {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-header {
+    margin-bottom: 30px;
+    color: #343a40;
+    text-align: center;
+  }
+  
+ .signup-form .form-group {
+    margin-bottom: 30px;
+  }
+  
+  .signup-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    color: whitesmoke;
+    background-color: green;
+  }
+  
+  @media (max-width: 768px) {
+    .signup-container {
+      margin-top: 20px;
+      padding: 15px;
+    }
+  }
+  

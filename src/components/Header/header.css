@@ -1,0 +1,25 @@
+/* header.css */
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar-nav.ml-auto {
+    margin-left: auto;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1.2em;
+    margin-right: 20px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ccc;
+  }
+  
+  .navbar {
+    background-color: #cbe945; /* Adjust the background color as needed */
+  }
+  
+  

@@ -1,0 +1,13 @@
+/* AdminHome.css */
+
+.admin-home-container {
+    margin-top: 50px;
+  }
+  
+  button {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  
