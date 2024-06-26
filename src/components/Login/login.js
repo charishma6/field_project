@@ -26,34 +26,59 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <Container>
-        <Row className="justify-content-md-center">
-          <Col md={6}>
-            <h1 className="text-center login-header">Login</h1>
-            <Form className="login-form" onSubmit={handleLoginSubmit}>
-              <Form.Group controlId="formUserType">
-                <Form.Label>User Type</Form.Label>
-                <Form.Control as="select" value={userType} onChange={handleUserTypeChange}>
-                  <option value="Faculty">Faculty</option>
-                  <option value="Admin">Admin</option>
-                  <option value="HOD">HOD</option>
-                </Form.Control>
-              </Form.Group>
+      <Container fluid>
+        <Row className="justify-content-center">
+          <Col md={6} className="login-form-col">
+            <div className="login-content">
+              <h1 className="text-center login-header">BookIT</h1>
+              <Form className="login-form" onSubmit={handleLoginSubmit}>
+                <Form.Group controlId="formUserType">
+                  <div className="user-type-options">
+                    <Form.Check
+                      type="radio"
+                      label="Faculty"
+                      name="userType"
+                      value="Faculty"
+                      checked={userType === 'Faculty'}
+                      onChange={handleUserTypeChange}
+                      className="user-type-radio"
+                    />
+                    <Form.Check
+                      type="radio"
+                      label="Admin"
+                      name="userType"
+                      value="Admin"
+                      checked={userType === 'Admin'}
+                      onChange={handleUserTypeChange}
+                      className="user-type-radio"
+                    />
+                    <Form.Check
+                      type="radio"
+                      label="HOD"
+                      name="userType"
+                      value="HOD"
+                      checked={userType === 'HOD'}
+                      onChange={handleUserTypeChange}
+                      className="user-type-radio"
+                    />
+                  </div>
+                </Form.Group>
 
-              <Form.Group controlId="formUsername">
-                <Form.Label>Username</Form.Label>
-                <Form.Control type="text" placeholder="Enter username" required />
-              </Form.Group>
+                <Form.Group controlId="formUsername">
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control type="text" placeholder="Enter username" required />
+                </Form.Group>
 
-              <Form.Group controlId="formPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Enter password" required />
-              </Form.Group>
+                <Form.Group controlId="formPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type="password" placeholder="Enter password" required />
+                </Form.Group>
 
-              <Button variant="primary" type="submit" className="mt-3 login-button">
-                Login
-              </Button>
-            </Form>
+                <Button variant="primary" type="submit" className="mt-3 login-button">
+                  LOGIN
+                </Button>
+              </Form>
+            </div>
           </Col>
         </Row>
       </Container>
