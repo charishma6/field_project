@@ -1,25 +1,136 @@
-/* header.css */
+/* src/components/Header/header.css */
+
+.navbar {
+  background: url('https://www.vnrvjiet.ac.in/images/vnrvjiet-logo.png') no-repeat left center, linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8)); /* Background logo and gradient */
+  background-size: contain, cover;
+  padding: 1rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  background: url('https://www.vnrvjiet.ac.in/images/vnrvjiet-logo.png') no-repeat left center, linear-gradient(to right, rgba(0, 86, 179, 0.8), rgba(0, 63, 127, 0.8));
+  background-size: contain, cover;
+}
 
 .navbar-brand {
-    font-size: 1.5em;
-    font-weight: bold;
+  color: #fff !important;
+  font-size: 2rem; /* Increased font size */
+  font-weight: 900; /* Bolder font */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #f8f9fa !important;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .navbar-nav.ml-auto {
-    margin-left: auto;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-size: 1.2rem; /* Slightly increased font size */
+  font-weight: 700; /* Bolder font */
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  position: relative;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.navbar-nav .nav-link:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #f8f9fa;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover:before {
+  width: 100%;
+  left: 0;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa !important;
+  background-color: #0056b3;
+  border-radius: 0.25rem;
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border: none;
+  background: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+  background: #ddd;
+}
+
+.navbar-toggler:hover {
+  background: #ccc;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8));
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .navbar-nav .nav-link {
-    font-size: 1.2em;
-    margin-right: 20px;
+    margin-bottom: 0.5rem;
+    color: #f8f9fa !important;
+    background-color: transparent;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
-  
+
   .navbar-nav .nav-link:hover {
-    color: #ccc;
+    background-color: #003f7f;
   }
-  
-  .navbar {
-    background-color: #cbe945; /* Adjust the background color as needed */
-  }
-  
-  
+}
