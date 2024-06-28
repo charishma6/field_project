@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import './facultysignup.css'; // Import the CSS file
+import './facultysignup.css';
+import axios from 'axios';
+
+// Function to get token from local storage
+const getToken = () => {
+  return localStorage.getItem('token');
+};
 
 const FacultySignup = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +18,9 @@ const FacultySignup = () => {
     course: '',
     facultyid: '',
   });
+
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -22,11 +31,33 @@ const FacultySignup = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle signup logic here
-    // Assuming signup is successful
-    navigate('/');
+    setMessage('');
+    setError('');
+
+    try {
+      const token = getToken(); // Retrieve the token from local storage
+
+      const response = await axios.post('http://localhost:8006/admin-api/create-faculty', formData, {
+        headers: {
+          'Authorization': `Bearer ${token}`, // Include the token in the request headers
+        },
+      });
+
+      setMessage(response.data.message);
+      // Redirect to admin home page after successful signup
+      setTimeout(() => {
+        navigate('/admin-home');
+      }, 2000); // Redirect after 2 seconds
+
+    } catch (error) {
+      if (error.response) {
+        setError(error.response.data.message);
+      } else {
+        setError('Network error. Please try again later.');
+      }
+    }
   };
 
   return (
@@ -111,6 +142,8 @@ const FacultySignup = () => {
               Signup
             </Button>
           </Form>
+          {message && <p className="text-success mt-3">{message}</p>}
+          {error && <p className="text-danger mt-3">{error}</p>}
         </Col>
       </Row>
     </Container>

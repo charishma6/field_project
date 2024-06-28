@@ -1,136 +1,94 @@
-/* src/components/FacultyHome/facultyhome.css */
+/* facultyhome.css */
+
+body {
+  background-color: #f0f4f8;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
 .faculty-home-container {
-  padding: 2rem 0;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInAnimation 0.5s ease-out;
 }
 
-.faculty-home-container .btn-primary {
-  font-size: 1.1rem;
-  padding: 0.75rem 1rem;
-  transition: background-color 0.3s, transform 0.3s;
-  background-color: #007bff;
-  border-color: #007bff;
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.faculty-home-container .btn-primary:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-h3 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #333;
+h2 {
+  color: #333333;
+  margin-bottom: 20px;
+  font-size: 24px;
   font-weight: bold;
 }
 
-.card {
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: none;
-  margin-bottom: 1rem;
-  transition: box-shadow 0.3s;
+.mb-3 {
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.mb-3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  animation: slideInUpAnimation 0.5s ease-out;
+}
+
+@keyframes slideInUpAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
-  position: relative;
-  padding: 1.5rem;
-  background-color: #fff;
-}
-
-.card-text {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.btn-success, .btn-danger {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-success {
-  background-color: #28a745;
-  border-color: #28a745;
-}
-
-.btn-success:hover {
-  background-color: #218838;
-  transform: scale(1.05);
-}
-
-.btn-danger {
-  background-color: #dc3545;
-  border-color: #dc3545;
-}
-
-.btn-danger:hover {
-  background-color: #c82333;
-  transform: scale(1.05);
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-/* Custom Scrollbar */
-.faculty-home-container ::-webkit-scrollbar {
-  width: 12px;
-}
-
-.faculty-home-container ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.faculty-home-container ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-}
-
-.faculty-home-container ::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .faculty-home-container .btn-primary {
-    font-size: 1rem;
-    padding: 0.5rem 0.75rem;
-  }
-
-  .card-body {
-    padding: 1rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .faculty-home-container .btn-primary {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.6rem;
-  }
-
-  .card-body {
-    padding: 0.75rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  .btn-success, .btn-danger {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.6rem;
-  }
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
 }

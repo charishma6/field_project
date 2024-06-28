@@ -1,0 +1,133 @@
+/* labs.css */
+
+body {
+    background-color: #e0f7fa;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .lab-booking-container {
+    margin-top: 50px;
+    background: linear-gradient(135deg, #ffffff, #e0f7fa);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .lab-booking-container h1 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #00796b;
+    text-align: center;
+    animation: slideInDown 0.5s ease-out;
+  }
+  
+  .lab-booking-container form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .lab-booking-container form .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .lab-booking-container form .form-control {
+    border-radius: 8px;
+    border: 2px solid #ced4da;
+    padding: 12px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .lab-booking-container form .form-control:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 8px rgba(0, 121, 107, 0.25);
+  }
+  
+  .lab-booking-container form .form-label {
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 10px;
+  }
+  
+  .lab-booking-container .btn-primary {
+    background-color: #00796b;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .lab-booking-container .btn-primary:hover {
+    background-color: #004d40;
+  }
+  
+  .lab-booking-container .available-labs {
+    background-color: #b2dfdb;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .lab-booking-container .available-labs h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #004d40;
+    text-align: center;
+    animation: slideInDown 0.5s ease-out;
+  }
+  
+  .lab-booking-container .alert {
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 15px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .lab-booking-container .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .lab-booking-container .alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
+  .lab-booking-container .btn-success {
+    background-color: #388e3c;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .lab-booking-container .btn-success:hover {
+    background-color: #2e7d32;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-50px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
